@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: grelha_perception
+Description: Description of grelha_perception
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: roscpp rospy sensor_msgs std_msgs message_runtime visualization_msgs tf pcl_ros

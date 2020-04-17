@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+ <model name='grelha'>
+   <pose >0 0 0 0 0 0</pose>
+    <link name="link">
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.01</ixx>
+            <iyy>0.06</iyy>s
+            <izz>0.07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://grelha/meshes/grelha.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+             <mesh>
+               <uri>model://grelha/meshes/grelha.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+</sdf>

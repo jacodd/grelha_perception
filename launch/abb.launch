@@ -1,0 +1,20 @@
+<launch>
+  <arg name="paused" default="false"/>
+
+  <!-- remap topics to conform to ROS-I specifications -->
+  <remap from="/arm_controller/follow_joint_trajectory" to="/joint_trajectory_action" />
+  <remap from="/arm_controller/state" to="/feedback_states" />
+  <remap from="/arm_controller/command" to="/joint_path_command"/>
+  <!--load urdf -->
+  <include file="$(find abb_irb4600_gazebo)/launch/load_irb4600_60_205.launch" />
+
+  <!-- spawn robot in gazebo -->
+  <node name="abb_irb4600_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model abb_irb4600_60_205" />
+
+  <!-- publish joint states in TF -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+
+  <!-- init and start Gazebo ros_control interface -->
+  <include file="$(find abb_irb4600_gazebo)/launch/irb4600_60_205_control.launch"/>
+
+</launch>

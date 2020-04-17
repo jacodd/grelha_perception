@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name='carro_grelha'>
+  <pose >0 0 0.4 0 -0 0</pose>
+    <link name="link">
+        <inertial>
+          <mass>15</mass>
+          <inertia>
+            <ixx>4.18865</ixx>
+            <izz>4.38914</izz>
+            <iyy>0.272438</iyy>
+            <ixy>-0.04548</ixy>
+            <ixz>4e-06</ixz>
+            <iyz>-0.007467</iyz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://carro_grelha/meshes/carro.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://carro_grelha/meshes/carro.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+       </link>
+    </model>
+</sdf>

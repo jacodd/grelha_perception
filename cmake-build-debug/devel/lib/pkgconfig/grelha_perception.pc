@@ -1,0 +1,8 @@
+prefix=/home/jaco/catkin_ws/src/grelha_perception/cmake-build-debug/devel
+
+Name: grelha_perception
+Description: Description of grelha_perception
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jaco/catkin_ws/src/grelha_perception/cmake-build-debug/devel/lib 
+Requires: roscpp rospy sensor_msgs std_msgs message_runtime visualization_msgs tf pcl_ros
